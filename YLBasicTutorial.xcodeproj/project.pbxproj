@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A974F9E81DDC3FFB00139013 /* YLTuorialFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */; };
+		A974F9EB1DDC5F5B00139013 /* YLTutorialSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */; };
 		BA318B291C5B6B6C00063BAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B281C5B6B6C00063BAA /* main.m */; };
 		BA318B2C1C5B6B6C00063BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B2B1C5B6B6C00063BAA /* AppDelegate.m */; };
 		BA318B2F1C5B6B6C00063BAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B2E1C5B6B6C00063BAA /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A974F9E61DDC3FFB00139013 /* YLTuorialFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTuorialFirstViewController.h; sourceTree = "<group>"; };
+		A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTuorialFirstViewController.m; sourceTree = "<group>"; };
+		A974F9E91DDC5F5B00139013 /* YLTutorialSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTutorialSecondViewController.h; sourceTree = "<group>"; };
+		A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTutorialSecondViewController.m; sourceTree = "<group>"; };
 		BA318B241C5B6B6C00063BAA /* YLBasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLBasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA318B281C5B6B6C00063BAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA318B2A1C5B6B6C00063BAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A974F9E51DDC3DBA00139013 /* TurorialFirst */ = {
+			isa = PBXGroup;
+			children = (
+				A974F9E61DDC3FFB00139013 /* YLTuorialFirstViewController.h */,
+				A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */,
+				A974F9E91DDC5F5B00139013 /* YLTutorialSecondViewController.h */,
+				A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */,
+			);
+			path = TurorialFirst;
+			sourceTree = "<group>";
+		};
 		BA318B1B1C5B6B6C00063BAA = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +118,7 @@
 		BA318B261C5B6B6C00063BAA /* YLBasicTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				A974F9E51DDC3DBA00139013 /* TurorialFirst */,
 				BA318B2A1C5B6B6C00063BAA /* AppDelegate.h */,
 				BA318B2B1C5B6B6C00063BAA /* AppDelegate.m */,
 				BA318B2D1C5B6B6C00063BAA /* ViewController.h */,
@@ -272,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA318B2F1C5B6B6C00063BAA /* ViewController.m in Sources */,
+				A974F9EB1DDC5F5B00139013 /* YLTutorialSecondViewController.m in Sources */,
+				A974F9E81DDC3FFB00139013 /* YLTuorialFirstViewController.m in Sources */,
 				BA318B2C1C5B6B6C00063BAA /* AppDelegate.m in Sources */,
 				BA318B291C5B6B6C00063BAA /* main.m in Sources */,
 			);
@@ -497,6 +517,7 @@
 				BA318B531C5B6B6C00063BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA318B541C5B6B6C00063BAA /* Build configuration list for PBXNativeTarget "YLBasicTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +526,7 @@
 				BA318B561C5B6B6C00063BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA318B571C5B6B6C00063BAA /* Build configuration list for PBXNativeTarget "YLBasicTutorialUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +535,7 @@
 				BA318B591C5B6B6C00063BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
