@@ -27,6 +27,10 @@
 
 #pragma mark - 实现线程池
 
+#pragma mark - 除了锁以外，还可以通过信号量(dispatch_semaphore)保证线程安全，而且效率最好
+// 保证线程安全的几种方式
 
+
+#pragma mark - 死锁怎么处理
 
 @end

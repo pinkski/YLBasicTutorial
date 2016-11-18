@@ -10,10 +10,10 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) NSString *strongString;               /**<strong string*/
-@property (nonatomic, strong) NSMutableString *mStrongString;       /**<strong mutable string*/
-@property (nonatomic, copy) NSString *cString;                      /**<copy string*/
-@property (nonatomic, copy) NSMutableString *mCopyString;           /**<copy mutable string*/
+@property (nonatomic, strong) NSString *s_string;               /**<strong string*/
+@property (nonatomic, strong) NSMutableString *s_m_string;       /**<strong mutable string*/
+@property (nonatomic, copy) NSString *c_string;                      /**<copy string*/
+@property (nonatomic, copy) NSMutableString *c_m_string;           /**<copy mutable string*/
 
 @property (nonatomic, strong) NSArray *strongArray;                 /**<strong array*/
 @property (nonatomic, strong) NSMutableArray *mStrongArray;         /**<strong mutable array*/
@@ -39,9 +39,9 @@
     
     [self stringTest];
     
-    [self arrayTest];
-    
-    [self urlRequestTest];
+//    [self arrayTest];
+//    
+//    [self urlRequestTest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,16 +49,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Data
+#pragma mark - 为啥要用copy，copy的作用
+
+// 从实例看出使用strong修饰的变量在赋值过程中 属于浅拷贝，而copy修饰的属于深拷贝
+// 所以：strong修饰的属性 会随着赋值源头的值改变而改变；
+//      copy修饰的属性 则不会随着赋值源头改变而改变；
 
 - (void)stringTest {
     //来源是NSString
     NSString *string = @"string";
     NSLog(@"address: %p | class: %@ of string",string,[string class]);
-    self.strongString = string;
-    self.cString = string;
-    self.mStrongString = string;
-    self.mCopyString = string;
+    self.s_string = string;
+    self.c_string = string;
+    self.s_m_string = string;
+    self.c_m_string = string;
     [self printStringInfo];
     
     NSLog(@"\n");
@@ -66,18 +70,18 @@
     //来源是NSMutableString
     NSMutableString *mutableString = [NSMutableString stringWithString:@"mutable string"];
     NSLog(@"address: %p | class: %@ of mutable string",mutableString,[mutableString class]);
-    self.strongString = mutableString;
-    self.cString = mutableString;
-    self.mStrongString = mutableString;
-    self.mCopyString = mutableString;
+    self.s_string = mutableString;
+    self.c_string = mutableString;
+    self.s_m_string = mutableString;
+    self.c_m_string = mutableString;
     [self printStringInfo];
 }
 
 - (void)printStringInfo {
-    NSLog(@"address: %p | class: %@ of strong string",self.strongString,[self.strongString class]);
-    NSLog(@"address: %p | class: %@ of copy string",self.cString,[self.cString class]);
-    NSLog(@"address: %p | class: %@ of strong mutable string",self.mStrongString,[self.mStrongString class]);
-    NSLog(@"address: %p | class: %@ of copy mutable string",self.mCopyString,[self.mCopyString class]);
+    NSLog(@"address: %p | class: %@ of strong string",self.s_string,[self.s_string class]);
+    NSLog(@"address: %p | class: %@ of copy string",self.c_string,[self.c_string class]);
+    NSLog(@"address: %p | class: %@ of strong mutable string",self.s_m_string,[self.s_m_string class]);
+    NSLog(@"address: %p | class: %@ of copy mutable string",self.c_m_string,[self.c_m_string class]);
     NSLog(@"\n\n\n");
 }
 

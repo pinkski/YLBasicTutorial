@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A974F9E81DDC3FFB00139013 /* YLTuorialFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */; };
 		A974F9EB1DDC5F5B00139013 /* YLTutorialSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */; };
+		A974F9EE1DDD887F00139013 /* YLTutorialFirstObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9ED1DDD887F00139013 /* YLTutorialFirstObject.m */; };
+		A974F9F41DDDA80000139013 /* YLTutuorialFirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = A974F9F31DDDA80000139013 /* YLTutuorialFirstView.m */; };
 		BA318B291C5B6B6C00063BAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B281C5B6B6C00063BAA /* main.m */; };
 		BA318B2C1C5B6B6C00063BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B2B1C5B6B6C00063BAA /* AppDelegate.m */; };
 		BA318B2F1C5B6B6C00063BAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA318B2E1C5B6B6C00063BAA /* ViewController.m */; };
@@ -41,6 +43,10 @@
 		A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTuorialFirstViewController.m; sourceTree = "<group>"; };
 		A974F9E91DDC5F5B00139013 /* YLTutorialSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTutorialSecondViewController.h; sourceTree = "<group>"; };
 		A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTutorialSecondViewController.m; sourceTree = "<group>"; };
+		A974F9EC1DDD887F00139013 /* YLTutorialFirstObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTutorialFirstObject.h; sourceTree = "<group>"; };
+		A974F9ED1DDD887F00139013 /* YLTutorialFirstObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTutorialFirstObject.m; sourceTree = "<group>"; };
+		A974F9F21DDDA80000139013 /* YLTutuorialFirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLTutuorialFirstView.h; sourceTree = "<group>"; };
+		A974F9F31DDDA80000139013 /* YLTutuorialFirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLTutuorialFirstView.m; sourceTree = "<group>"; };
 		BA318B241C5B6B6C00063BAA /* YLBasicTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLBasicTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA318B281C5B6B6C00063BAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA318B2A1C5B6B6C00063BAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +97,10 @@
 				A974F9E71DDC3FFB00139013 /* YLTuorialFirstViewController.m */,
 				A974F9E91DDC5F5B00139013 /* YLTutorialSecondViewController.h */,
 				A974F9EA1DDC5F5B00139013 /* YLTutorialSecondViewController.m */,
+				A974F9EC1DDD887F00139013 /* YLTutorialFirstObject.h */,
+				A974F9ED1DDD887F00139013 /* YLTutorialFirstObject.m */,
+				A974F9F21DDDA80000139013 /* YLTutuorialFirstView.h */,
+				A974F9F31DDDA80000139013 /* YLTutuorialFirstView.m */,
 			);
 			path = TurorialFirst;
 			sourceTree = "<group>";
@@ -291,8 +301,10 @@
 			files = (
 				BA318B2F1C5B6B6C00063BAA /* ViewController.m in Sources */,
 				A974F9EB1DDC5F5B00139013 /* YLTutorialSecondViewController.m in Sources */,
+				A974F9EE1DDD887F00139013 /* YLTutorialFirstObject.m in Sources */,
 				A974F9E81DDC3FFB00139013 /* YLTuorialFirstViewController.m in Sources */,
 				BA318B2C1C5B6B6C00063BAA /* AppDelegate.m in Sources */,
+				A974F9F41DDDA80000139013 /* YLTutuorialFirstView.m in Sources */,
 				BA318B291C5B6B6C00063BAA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

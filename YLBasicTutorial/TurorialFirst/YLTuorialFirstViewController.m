@@ -25,7 +25,7 @@ NSString *const textFrameChangedNotification = @"textFrameChangedNotification";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupMTextField];
+//    [self setupMTextField];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +39,7 @@ NSString *const textFrameChangedNotification = @"textFrameChangedNotification";
     
 }
 
-#pragma mark - NSNotification KVO delegate
+#pragma mark - NSNotification KVO delegate  同步or异步？
 // KVO NSNotifiction delegate 是同步吗？   都是同步的, KVO Notification都在同一个线程中 delegate直接调用肯定是同步
 
 - (void)setupMTextField {
@@ -91,6 +91,12 @@ NSString *const textFrameChangedNotification = @"textFrameChangedNotification";
         }
     }
 }
+
+#pragma mark - valueForKey 是怎么知道哪些key被设置了KVO？
+// 1, 寻找‘somekey’的method方法
+// 2, 如果没有找到，则寻找'somekey'的ivar变量
+// 3, 如果还没找到，则去'valueForUndefinedKey'中寻找
+// 4, 最后还没找到，则抛出异常
 
 
 #pragma mark - 四种存储方式
@@ -151,9 +157,44 @@ NSString *const textFrameChangedNotification = @"textFrameChangedNotification";
 
 - (void)howStatic {
     
-    
+    //初始化的全局变量和静态变量是存放在一块的，未初始化的全局变量和静态变量在相邻的另一块区域
+    //当类首次被加载时static定义的变量被分配空间，当程序结束后由系统释放控件
+    //如果一个程序里过多的使用static会占用程序整个生命周期的运行内存
 }
 
+#pragma makr - Cocoa响应链是怎么实现的
+
+// 响应链是由响应对象（都继承了UIResponder）组成的N叉树
+// 由叶子结点向上分发事件传递 比如 UIButton -> UIView - > UIViewController -> UIWindow -> UIApplication -> appdelegate
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    UIResponder *next = [self nextResponder];
+    NSMutableString * prefix = @"".mutableCopy;
+    
+    while (next != nil) {
+        NSLog(@"%@%@", prefix, [next class]);
+        [prefix appendString: @"--"];
+        next = [next nextResponder];
+    }
+}
+
+
+#pragma mark - loadView
+
+- (void)loadView {
+    
+    [super loadView];
+    
+    // 如果xib文件不用重写loadView,当它的view在被需要的时候为nil则自动调用该方法默认生成一个self.view
+}
+
+#pragma mark - UIView的动画属性
+
+- (void)viewAnimation {
+    
+//    self.view.transform
+}
 
 
 
